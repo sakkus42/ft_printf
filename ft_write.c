@@ -17,6 +17,11 @@ void    ft_print_char(va_list ar, int *pn)
 
 void ft_print_str(char *str, int *pn)
 {
+	if (!str)
+	{
+		ft_putchar('\0', pn);
+		return;
+	}
     int i;
 
     i = 0;

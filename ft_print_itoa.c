@@ -55,6 +55,6 @@ void    ft_print_decimal_number(va_list args, int *pn)
 {
     int     nb;
 
-    nb = (int)va_arg(args, int);
+    nb = va_arg(args, int);
     ft_print_str(ft_itoa(nb), pn);
 }

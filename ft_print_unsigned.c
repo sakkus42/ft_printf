@@ -2,11 +2,6 @@
 
 static void		ft_putunsnbr(unsigned x, int *pn)
 {
-	if (x > MIN_VALUE)
-	{
-		ft_putchar('0', pn);
-		return;
-	}
 	if (x > 10)
 	{
 		ft_putunsnbr(x / 10, pn);
@@ -18,7 +13,5 @@ static void		ft_putunsnbr(unsigned x, int *pn)
 
 void	ft_print_unsigned(unsigned x, int *pn)
 {
-	if (x < 0)
-		x = MIN_VALUE + x;
 	ft_putunsnbr(x, pn);
 }
