@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_itoa.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sakkus <sakkus@student.42istanbul.com.tr>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/31 12:23:23 by sakkus            #+#    #+#             */
+/*   Updated: 2022/07/31 18:41:05 by sakkus           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static int	ft_intlen(int n)
@@ -51,10 +63,11 @@ static char	*ft_itoa(int n)
 	return (str);
 }
 
-void    ft_print_decimal_number(va_list args, int *pn)
+void	ft_print_decimal_number(int nb, int *pn)
 {
-    int     nb;
+	char	*str;
 
-    nb = va_arg(args, int);
-    ft_print_str(ft_itoa(nb), pn);
+	str = ft_itoa(nb);
+	ft_print_str(str, pn);
+	free(str);
 }
