@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sakkus <sakkus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sakkus <sakkus@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 12:34:40 by sakkus            #+#    #+#             */
-/*   Updated: 2022/07/31 21:09:52 by sakkus           ###   ########.fr       */
+/*   Updated: 2022/07/31 18:43:58 by sakkus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,21 +55,4 @@ int	ft_printf(const char *str, ...)
 			ft_putchar(str[i++], &print_number);
 	}
 	return (print_number);
-}
-
-int fd_printf(int x, ...)
-{
-	va_list args;
-	int y = 0;
-	va_start(args, x);
-	while(x--)
-	{
-		y += va_arg(args, int);
-	}
-	return(y);
-}
-
-int main()
-{
-	printf("%d",fd_printf(3,1,2,3));
 }
